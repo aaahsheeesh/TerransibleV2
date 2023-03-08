@@ -15,6 +15,7 @@
         state: present
   - name: "copy code from GitHub"
     get_url:
+        url: "http://www.google.com"
         dest: "/var/www/html/index.php"
   - name: "Start httpd services"
     service:
