@@ -15,6 +15,7 @@ data "aws_ami" "amazon-linux" {
 resource "aws_instance" "dev_machine" {
   ami = data.aws_ami.amazon-linux.id
   instance_type = "t2.micro"
+  count = 3
   key_name = "terransible"
 
   tags = {
